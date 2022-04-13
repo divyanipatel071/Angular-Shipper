@@ -1,0 +1,59 @@
+.contact-detail-wrapper {
+    padding: 81px 0 76px;     
+    .contact-detail-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        .contact-col {
+            max-width: 50%;
+            flex: 0 0 50%; 
+            padding:0 15px;             
+            .card{
+                width: 100%; 
+                border-radius: 10px;
+                filter: drop-shadow(0 0 10px rgba(0,0,0,0.04));
+                background-color: #ffffff;
+                border: 1px solid #dfdfdf;
+                .card-body{
+                    display: flex; 
+                    flex-direction: column; 
+                    align-items: center; 
+                    text-align: center;
+                    padding: 45px 20px;
+                    .card-icon{
+                        width: 55px;
+                        display: block;
+                        margin-bottom: 8px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    h3{
+                        color: #1f4499;
+                        margin-bottom: 13px;
+                    }                   
+                    address{
+                        font-size: 20px;
+                        line-height: 26px;
+                        color: #000000;
+                        font-weight: 400;
+                    }
+                    .contact-link {
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #000000;
+                        font-weight: 400;
+                        a {
+                            color: inherit;
+                            &:hover {
+                                color: #1f4499;
+                            }
+                        }
+                    }
+                }        
+            }
+        }
+    }   
+}
+
+
