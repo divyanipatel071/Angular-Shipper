@@ -1,9 +1,8 @@
-
 <header class="header">
     <div class="container">
         <div class="header-wrapper">
             <div class="header-left">
-                <a href="#" title="Logo" class="logo-link" routerLink="home" routerLinkActive="router-link-active">
+                <a title="Logo" class="logo-link" routerLink="home" routerLinkActive="router-link-active">
                     <i><img src="../../assets/images/logo.png" alt="Logo" title="Logo"></i>
                 </a>
                 <ul>
@@ -11,11 +10,27 @@
                         <a href="#" title="About CTN"> About CTN </a>
                     </li>
                     <li>
-                        <a href="#" title="CTN Fees">CTN Fees</a>
+                        <a routerLink="" class="ctn-fees" title="CTN Fees" (click)="collapse.toggle()" [attr.aria-expanded]="!ctnFees" aria-controls="collapseExample">CTN Fees</a>
+                        <div class="ctn-fees-dropdown" #collapse="ngbCollapse" 
+                            [(ngbCollapse)]="ctnFees">
+                            <app-ctn-fees-detail></app-ctn-fees-detail>
+                        </div>
                     </li>
                 </ul>
             </div>
             <div class="header-right">
+                <div ngbDropdown class="dropdown-wrapper">
+                    <button class="dropdown-button" id="accountDropdown" ngbDropdownToggle>My Account</button>
+                    <div ngbDropdownMenu aria-labelledby="accountDropdown">
+                        <div class="dropdown-inner">
+                            <button ngbDropdownItem><i><img src="../../assets/images/profile.svg" alt="profile"></i>My Profile</button>
+                            <button ngbDropdownItem><i><img src="../../assets/images/create-ctn.svg" alt="create-ctn"></i>Create CTN</button>
+                            <button ngbDropdownItem><i><img src="../../assets/images/ctn-list.svg" alt="ctn-list"></i>CTN List</button>
+                            <button ngbDropdownItem class="logout"><i><img src="../../assets/images/logout.svg"
+                                alt="logout"></i>Logout</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="country-select">
                     <i><img src="../../assets/images/internet.svg" alt="internet"></i>
                     <select class=" select">

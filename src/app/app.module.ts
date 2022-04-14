@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthorityComponent } from './authority/authority.component';
 import { ServiesProvideComponent } from './servies-provide/servies-provide.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { CtnFeesDetailComponent } from './ctn-fees-detail/ctn-fees-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     BannerComponent,
     AuthorityComponent,
     ServiesProvideComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    CtnFeesDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -46,6 +46,7 @@
                 padding: 0;
                 margin: 0;
                 li {
+                    position: relative;
                     margin-right: 35px;
                     &:last-child {
                         margin-right: 0;
@@ -55,7 +56,13 @@
                         line-height: 20px;
                         color: #ffffff;
                         text-decoration: none;  
-                        text-transform: capitalize;                                                             
+                        text-transform: capitalize;  
+                        &:hover {
+                            color: #ffca00;
+                        }      
+                        &.ctn-fees[aria-expanded~="true"] {
+                            color: #ffca00;
+                        }                                                                           
                     }
                 }
             }
@@ -81,7 +88,7 @@
                     line-height: 0;
                     margin-right: 8px;
                     img{
-                        width: 22px;
+                        width: 20px;
                     }
                 }
             }
@@ -89,7 +96,104 @@
                 img {
                     width: 170px;
                 }
+            }                                          
+            .dropdown-wrapper {
+                margin-right: 20px;            
+                .dropdown-button {
+                    min-width: 200px;
+                    background-color: transparent;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    padding: 14px 30px;
+                    border-radius: 25px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 20px;                    
+                    &:focus {
+                        outline: none; 
+                    } 
+                }
+                .dropdown-toggle {
+                    &:after { 
+                        margin-left: 20px; 
+                        border: solid #fff; 
+                        border-width: 0 2px 2px 0; 
+                        padding: 3px; 
+                        transform: rotate(45deg); 
+                        -o-transform: rotate(45deg); 
+                        -ms-transform: rotate(45deg); 
+                        -moz-transform: rotate(45deg); 
+                        -webkit-transform: rotate(45deg); 
+                        transform: rotate(45deg); 
+                        -o-transition: all 0.5s; 
+                        -ms-transition: all 0.5s; 
+                        -moz-transition: all 0.5s; 
+                        -webkit-transition: all 0.5s; 
+                        transition: all 0.5s; 
+                        position: relative;
+                    } 
+                }
+                &.show {
+                    width: 100%;
+                    border-radius: 10px;
+                    .dropdown-toggle {
+                        &::after { 
+                            -o-transform: rotate(-135deg); 
+                            -ms-transform: rotate(-135deg); 
+                            -moz-transform: rotate(-135deg); 
+                            -webkit-transform: rotate(-135deg); 
+                            transform: rotate(-135deg);                             
+                            top: 4px;
+                        }
+                    }
+                }
             }
+            .dropdown-menu {               
+                width: 100%;
+                border-radius: 10px;
+                margin-top: 13px !important;
+                padding-top: 11px;
+                .dropdown-inner {
+                    position: relative;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -18px;
+                        right: 33px;
+                        border-bottom: 10px solid #fff;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                    }
+                }
+                .dropdown-item{
+                    display: flex; 
+                    align-items: center;                    
+                    font-size: 16px;
+                    line-height: 33px;
+                    color: #1e2423;
+                    font-weight: 500;
+                    padding: 4px 18px;
+                    &.logout{
+                        color: #df2b2b;
+                    }
+                    &.active, &:active {                    
+                        background-color: #ffca00;
+                    }
+                    i {
+                        display: block; 
+                        width: 20px; 
+                        margin-right: 16px;
+                        line-height: 0
+                    }                    
+                } 
+            }  
         }
+    }
+    .ctn-fees-dropdown {
+        position: absolute;
+        width: 731px;
+        top: 100%;
+        left: -20px;
+        margin-top: 15px;
     }
 }

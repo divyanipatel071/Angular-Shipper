@@ -7,6 +7,8 @@ import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {  
+
+  public ctnFees = true;
   
   ngOnInit(): void {        
     // let outer_wrap = <Element>document.querySelector('.outer-wrapper');

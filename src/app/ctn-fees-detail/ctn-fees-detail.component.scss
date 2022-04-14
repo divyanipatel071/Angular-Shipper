@@ -1,0 +1,55 @@
+.ctn-fees-card {
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px rgba(30,36,35,0.25));
+    border: 0;
+    .card-body {
+        padding: 16px 20px;
+
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+            font-weight: 500;
+        }
+
+        .table {
+            margin-top: 12px;
+            margin-bottom: 0;
+            > :not(:first-child) {
+                border-top: 0;
+            }
+            thead {
+                background-color: #f1f1f1;
+                th {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #000000;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    padding: 7px 13px;
+                    border: 1px solid #dcdcdc; 
+                    &.cargo-type {
+                        width: 29%;
+                    }
+                    &.import-fee {
+                        width: 26.8%;
+                    }
+                }
+            }                      
+            p { 
+                font-size: 14px;
+                line-height: 24px;
+                color: #000000;
+                font-weight: 400;
+                &.bold {
+                    font-weight: 600;
+                }
+            }            
+            td {
+                border: 1px solid #dcdcdc; 
+                vertical-align: bottom;
+                padding: 18px 13px;
+            }         
+        }
+    }
+}
